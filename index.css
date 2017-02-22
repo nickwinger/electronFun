@@ -1,0 +1,27 @@
+ body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body > div {
+	user-select: none;
+	text-align: center;
+	font-size: 180px; 
+	font-weight: bold; 
+	color: red;
+}
+
+#correct {
+	display: none;
+}
+
+.buttonContainer {
+	text-align: center;
+}
+
+#correct button {
+	background-color: transparent;	
+    border: 20px solid lightblue;
+    border-radius: 120px;
+}
