@@ -49,7 +49,10 @@ function createWindow () {
 
     });
 
-    
+
+mainWindow.webContents.session.clearCache(function(){
+//some callback.
+});    
 }
 
 const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
