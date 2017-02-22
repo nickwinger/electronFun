@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "package": "electron-packager . ElectronFun --asar --platform=win32 --arch=ia32 --download.strictSSL=false --overwrite --ignore=installer --ignore=.idea --win32metadata.ProductName=\"Electron Fun\" --win32metadata.CompanyName=\"bit4bit\" --win32metadata.OriginalFilename=\"Electron Fun\" --win32metadata.InternalName=\"Electron Fun\" --win32metadata.FileDescription=\"Electron Fun\"",
-    "electron": "electron"
+    "electron": "electron",
+	"start": "electron ."
   },
   "keywords": [
     "Electron",

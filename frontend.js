@@ -22,6 +22,7 @@ function animate() {
 
 var pw = 'bitte';
 var pwIndex = -1;
+var clicks = 0;
 
 $(function() {
 	$('#close').click(function() {
@@ -29,8 +30,28 @@ $(function() {
 	});
 });
 
+function checkClicks() {
+   clicks++;
+	if (clicks == 10) 
+		$('#main').text('Gib das richtige Zauberwort ein... :D');
+	
+	if (clicks == 20) 
+		$('#main').text('Das richtige Zauberwort fangt mit B an... :D');
+	
+	if (clicks == 30) 
+		$('#main').text('Du bist schlecht erzogen wenn Du das Zauberwort nicht kennst... :D');
+		
+	if (clicks == 40) 
+		$('#main').text('Das Zauberwort lautet bitte, weiﬂ doch jeder... :D');
+		
+	if (clicks == 50) 
+		require('electron').remote.app.quit();
+}
+
 window.onkeydown = function(e) {   
+	checkClicks();
    
+		
 	if (e.keyCode == 66 && pwIndex == -1)
 		pwIndex++;
 	else if (e.keyCode == 73 && pwIndex == 0)
@@ -55,6 +76,8 @@ window.onkeydown = function(e) {
 };
 
 window.onclick = function() {
+	checkClicks();
+
 	if (!quitable) {
 		pwIndex = 0;
 		animate();

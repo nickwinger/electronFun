@@ -17,7 +17,8 @@ function createWindow () {
 	// , webPreferences: { nodeIntegration: false }
   // Create the browser window.
   mainWindow = new BrowserWindow({transparent : true, frame: false, fullscreen: true, alwaysOnTop: true,
-	skipTaskbar: true, kiosk: true, width: 1024, height: 768, title: 'Electron fun'});
+	skipTaskbar: true, kiosk: true, width: 1024, height: 768, title: 'Electron fun',
+	movable: false, resizable: false});
 
 	mainWindow.loadURL(`file://${__dirname}/index.html`);
 		
