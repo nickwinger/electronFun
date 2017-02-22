@@ -3,7 +3,7 @@ Some fun with electron
 
 # How to run
 npm i
-npm run electron .
+npm start
 
 # Create package
 npm run package
