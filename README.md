@@ -2,8 +2,8 @@
 Some fun with electron
 
 # How to run
-npm i
-npm start
+..* npm i
+..* npm start
 
 # Create package
 npm run package
